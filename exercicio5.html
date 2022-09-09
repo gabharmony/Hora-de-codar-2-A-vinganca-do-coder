@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 | Exercício 5</title>
+</head>
+<body>
+    <script>
+        // 5. Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+
+        var numUm = parseInt(prompt("Digite o primeiro número:"));
+        var numDois = parseInt(prompt("Digite o segundo número:"));
+        var numTres = parseInt(prompt("Digite o terceiro número:"));
+        var numQuatro = parseInt(prompt("Digite o quarto número:"));
+        var numCinco = parseInt(prompt("Digite o quinto número:"));
+        var numSeis = parseInt(prompt("Digite o sexto número:"));
+        var media = 0;
+
+        while(isNaN(numUm)){
+            numUm = parseInt(prompt("Digite o primeiro número (Somente Números):"));
+        }
+
+        while(isNaN(numDois)){
+            numDois = parseInt(prompt("Digite o segundo número (Somente números):"));
+        }
+
+        while(isNaN(numTres)){
+            numTres = parseInt(prompt("Digite o terceiro número (Somente números):"));
+        }
+
+        while(isNaN(numQuatro)){
+            numQuatro = parseInt(prompt("Digite o quarto número (Somente números):"));
+        }
+
+        while(isNaN(numCinco)){
+            numCinco = parseInt(prompt("Digite o quinto número (Somente números):"));
+        }
+
+        while(isNaN(numSeis)){
+            numSeis = parseInt(prompt("Digite o sexto número (Somente números):"));
+        }
+
+        media = (numUm + numDois + numTres + numQuatro + numCinco + numSeis)/6;
+
+        document.write("<strong>Os números informados foram: " + numUm + "," + numDois + "," + numTres + "," + numQuatro + "," + numCinco + "," + numSeis + ". </strong>")
+
+        document.write("<strong>A média aritmética é: " + media + "</strong>")
+    </script>
+</body>
+</html>

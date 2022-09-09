@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 | Exercício 8</title>
+</head>
+<body>
+    <script>
+        /* 8. Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que
+         0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra 
+         situação, ele receberá uma mensagem de "tente novamente" */
+
+        var numUm = parseInt(prompt("Digite o primeiro número (Entre 0 e 10):"));
+        var numDois = parseInt(prompt("Digite o segundo número (Entre 0 e 10):"));
+        var numTres = parseInt(prompt("Digite o terceiro número (Entre 0 e 10):"));
+        var numQuatro = parseInt(prompt("Digite o quarto número (Entre 0 e 10):"));
+        var media = 0;
+
+        while(isNaN(numUm) || numUm < 0 || numUm > 10){
+            numUm = parseInt(prompt("Digite o primeiro número (Somente Números entre 0 e 10):"));
+        }
+
+        while(isNaN(numDois) || numDois < 0 || numDois > 10){
+            numDois = parseInt(prompt("Digite o segundo número (Somente números entre 0 e 10):"));
+        }
+
+        while(isNaN(numTres) || numTres < 0 || numTres > 10){
+            numTres = parseInt(prompt("Digite o terceiro número (Somente números entre 0 e 10):"));
+        }
+
+        while(isNaN(numQuatro) || numQuatro < 0 || numQuatro > 10){
+            numQuatro = parseInt(prompt("Digite o quarto número (Somente números entre 0 e 10):"));
+        }
+
+        media = (numUm + numDois + numTres + numQuatro)/4;
+
+        if(media > 5){
+            document.write("<strong>Você passou no teste</strong>");
+        }else{
+            document.write("<strong>Tente novamente</strong>");
+        }
+    </script>
+</body>
+</html>

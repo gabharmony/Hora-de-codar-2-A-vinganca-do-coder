@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 | Exercício 11</title>
+</head>
+<body>
+    <script>
+        /* 11. Uma micro calculadora
+         Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas 
+         (codificada da seguinte forma: 1.Adição, 2.Subtração, 3.Divisão, 4.Multiplicação). O programa deve calcular e escrever o resultado dessa 
+         operação sobre os dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações */
+
+        function adicao(){
+            var soma = numUm + numDois;
+
+            document.write("A soma dos números é " + soma);
+        }
+
+        function subtracao(){
+            var subtrai = numUm - numDois;
+
+            document.write("A subtração dos números é " + subtrai);
+        }
+
+        function divisao(){
+            var divide = numUm / numDois;
+
+            document.write("A divisão dos números é " + divide);
+        }
+        
+        function multiplicacao(){
+            var multiplica = numUm * numDois;
+
+            document.write("A multiplicação dos números é " + multiplica);
+        }
+        
+        var numUm = parseInt(prompt("Digite o primeiro número inteiro:"));
+        var numDois = parseInt(prompt("Digite o segundo número inteiro:"));
+        var escolha = parseInt(prompt("Escolha uma operação: \n 1.Adição \n 2.Subtração \n 3.Divisão \n 4.Multiplicação"));
+
+        while(isNaN(numUm)){
+            numUm = parseInt(prompt("Digite o primeiro número (Somente Números):"));
+        }
+
+        while(isNaN(numDois)){
+            numDois = parseInt(prompt("Digite o segundo número (Somente números):"));
+        }
+
+        while(isNaN(escolha) || escolha > 4 || escolha < 1)
+        {
+            escolha = parseInt(prompt("Escolha uma operação: \n 1.Adição \n 2.Subtração \n 3.Divisão \n 4.Multiplicação"));
+        }
+
+        switch (escolha) {
+            case 1:
+                adicao();
+                break;
+            case 2:
+                subtracao();
+                break;
+            case 3: 
+                divisao();
+                break;
+            case 4: 
+                multiplicacao();
+                break;
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>

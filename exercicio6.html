@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 | Exercício 6</title>
+</head>
+<body>
+    <script>
+        // 6. Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
+
+        var numUm = parseInt(prompt("Digite o primeiro número:"));
+        var numDois = parseInt(prompt("Digite o segundo número:"));
+        var numTres = parseInt(prompt("Digite o terceiro número:"));
+        var numQuatro = parseInt(prompt("Digite o quarto número:"));
+
+        while(isNaN(numUm)){
+            numUm = parseInt(prompt("Digite o primeiro número (Somente Números):"));
+        }
+
+        while(isNaN(numDois)){
+            numDois = parseInt(prompt("Digite o segundo número (Somente números):"));
+        }
+
+        while(isNaN(numTres)){
+            numTres = parseInt(prompt("Digite o terceiro número (Somente números):"));
+        }
+
+        while(isNaN(numQuatro)){
+            numQuatro = parseInt(prompt("Digite o quarto número (Somente números):"));
+        }
+
+        document.write("<strong>O primeiro número informados foi: " + numUm + "</strong><br>");
+
+        document.write("<strong>O último número informados foi: " + numQuatro + "</strong><br>");
+
+        if(numUm > numDois && numUm > numTres && numUm > numQuatro){
+            document.write("<strong>O maior número informados foi: " + numUm + "</strong>");
+        }else if(numDois > numUm && numDois > numTres && numDois > numQuatro){
+            document.write("<strong>O maior número informado foi: " + numDois + "</strong>");
+        }else if(numTres > numUm && numTres > numDois && numTres > numQuatro){
+            document.write("<strong>O maior número informado foi: " + numTres + "</strong>");
+        }else{
+            document.write("<strong>O maior número informado foi: " + numQuatro + "</strong>");
+        }
+    </script>
+</body>
+</html>

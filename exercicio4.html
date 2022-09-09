@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 | Exercício 4</title>
+</head>
+<body>
+    <script>
+        // 4. Faça um programa que leia  3 valores (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+
+        var numUm = parseInt(prompt("Digite o primeiro número:"));
+        var numDois = parseInt(prompt("Digite o segundo número:"));
+        var numTres = parseInt(prompt("Digite o terceiro número:"));
+        var soma = 0;
+
+        while(isNaN(numUm)){
+            numUm = parseInt(prompt("Digite o primeiro número (Somente Números):"));
+        }
+
+        while(isNaN(numDois)){
+            numDois = parseInt(prompt("Digite o segundo número (Somente números):"));
+        }
+
+        while(isNaN(numTres)){
+            numTres = parseInt(prompt("Digite o terceiro número (Somente números):"));
+        }
+
+        if(numUm > numDois && numDois > numTres){
+            soma = numUm + numDois;
+            document.write("<strong>A soma dos dois maiores é: " + soma + "</strong>");
+        }
+        else if(numUm > numDois && numTres > numDois){
+            soma = numUm + numTres
+            document.write("<strong>A soma dos dois maiores é: " + soma + "</strong>");
+        }
+        else{
+            soma = numDois + numTres
+            document.write("<strong>A soma dos dois maiores é: " + soma + "</strong>")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 | Exercício 3</title>
+</head>
+<body>
+    <script>
+        // 3. Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+
+        var numUm = parseInt(prompt("Digite o primeiro número:"));
+        var numDois = parseInt(prompt("Digite o segundo número:"));
+        var numTres = parseInt(prompt("Digite o terceiro número:"));
+
+        while(isNaN(numUm)){
+            numUm = parseInt(prompt("Digite o primeiro número (Somente Números):"));
+        }
+
+        while(isNaN(numDois)){
+            numDois = parseInt(prompt("Digite o segundo número (Somente números):"));
+        }
+
+        while(isNaN(numTres)){
+            numTres = parseInt(prompt("Digite o terceiro número (Somente números):"));
+        }
+
+        if(numUm > numDois && numUm > numTres){
+            document.write("<strong>O maior número é o primeiro digitado: " + numUm + "</strong>");
+        }
+        else if(numDois > numUm && numDois > numTres){
+            document.write("<strong>O maior número é o segundo digitado: " + numDois + "</strong>");
+        }
+        else{
+            document.write("<strong>O maior número é o terceiro digitado: " + numTres + "</strong>")
+        }
+    </script>
+</body>
+</html>

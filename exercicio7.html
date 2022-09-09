@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 | Exercício 7</title>
+</head>
+<body>
+    <script>
+        /* 7. Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. 
+         Escreva o valor final da soma efetuada e também todos valores que o usuário informou. */
+
+        var numUm = parseInt(prompt("Digite o primeiro número:"));
+        var numDois = parseInt(prompt("Digite o segundo número:"));
+        var numTres = parseInt(prompt("Digite o terceiro número:"));
+        var numQuatro = parseInt(prompt("Digite o quarto número:"));
+        var numCinco = parseInt(prompt("Digite o quinto número:"));
+        var numSeis = parseInt(prompt("Digite o sexto número:"));
+        var soma = 0;
+
+        //Verificação numUm
+
+        while(isNaN(numUm)){
+            numUm = parseInt(prompt("Digite o primeiro número (Somente Números):"));
+        }
+
+        if(numUm < 72){
+            soma += numUm;
+        }
+
+        //Verificação numDois
+
+        while(isNaN(numDois)){
+            numDois = parseInt(prompt("Digite o segundo número (Somente números):"));
+        }
+
+        if(numDois < 72){
+            soma += numDois;
+        }
+
+        //Verificação numTres
+
+        while(isNaN(numTres)){
+            numTres = parseInt(prompt("Digite o terceiro número (Somente números):"));
+        }
+
+        if(numTres < 72){
+            soma += numTres;
+        }
+
+        //Verificação numQuatro
+
+        while(isNaN(numQuatro)){
+            numQuatro = parseInt(prompt("Digite o quarto número (Somente números):"));
+        }
+
+        if(numQuatro < 72){
+            soma += numQuatro;
+        }
+
+        //Verificação numCinco
+
+        while(isNaN(numCinco)){
+            numCinco = parseInt(prompt("Digite o quinto número (Somente números):"));
+        }
+
+        if(numCinco < 72){
+            soma += numCinco;
+        }
+
+        //Verificação numSeis
+
+        while(isNaN(numSeis)){
+            numSeis = parseInt(prompt("Digite o sexto número (Somente números):"));
+        }
+
+        if(numSeis < 72){
+            soma += numSeis
+        }
+
+
+        document.write("<strong>Os números informados foram: " + numUm + "," + numDois + "," + numTres + "," + numQuatro + "," + numCinco + "," + numSeis + ". </strong><br>")
+
+        document.write("<strong>A soma dos números informados menores que 72 é: " + soma + "</strong>")
+    </script>
+</body>
+</html>
